@@ -32,7 +32,9 @@ entity top is
     sync_o         : out std_logic;
     red_o          : out std_logic_vector(7 downto 0);
     green_o        : out std_logic_vector(7 downto 0);
-    blue_o         : out std_logic_vector(7 downto 0)
+    blue_o         : out std_logic_vector(7 downto 0);
+	 display_mode_i     : in  std_logic_vector(1 downto 0);
+	 direct_mode_i      : in  std_logic
    );
 end top;
 
@@ -250,6 +252,19 @@ begin
   --dir_red
   --dir_green
   --dir_blue
+  
+	dir_red<=x"FF" when dir_pixel_column<=160 else
+				x"FF" when dir_pixel_column>=320 and dir_pixel_column<=480 else
+				
+		 		x"00";
+	dir_green<=x"FF" when dir_pixel_column<320 else
+				x"00";
+	dir_blue<=x"FF" when dir_pixel_column<=80 else
+				x"FF" when dir_pixel_column>160 and dir_pixel_column<=240 else
+				x"FF" when dir_pixel_column>320 and dir_pixel_column<=400 else
+				x"FF" when dir_pixel_column>480 and dir_pixel_column<=560 else
+			
+				x"00";
  
   -- koristeci signale realizovati logiku koja pise po TXT_MEM
   --char_address

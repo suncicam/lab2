@@ -1,0 +1,11 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6 (64-bit)
+# Build 269223 by xbuild on Wed Jun  5 11:14:03 MDT 2013
+# Start of session at: Wed Mar 16 13:13:33 2016
+# Process ID: 6136
+# Log file: C:/Users/student/Desktop/RA27-2013/lab2/HDL/synthesis/lab2/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/student/Desktop/RA27-2013/lab2/HDL/synthesis/lab2/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/student/Desktop/RA27-2013/lab2/HDL/synthesis/lab2/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
